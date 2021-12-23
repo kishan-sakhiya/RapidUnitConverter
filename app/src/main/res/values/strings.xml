@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Rapid Unit Converter</string>
+    <string name="splash_txt">Rapid Unit Converter</string>
+    <string name="img_content_description">Icon</string>
+    <string name="length">Length</string>
+    <string name="speed_icon">speed icon</string>
+    <string name="length_icon">length icon</string>
+    <string name="speed">Speed</string>
+    <string name="first">first</string>
+    <string name="second">second</string>
+    <string name="three">three</string>
+    <string name="four">four</string>
+    <string name="five">five</string>
+    <string name="six">six</string>
+    <string name="good">Good</string>
+    <string name="result">Result</string>
+    <string name="our_team">Our Team</string>
+    <string name="kishan">Kishan</string>
+    <string name="android_developer">Android Developer</string>
+    <string name="harsh">Harsh</string>
+    <string name="ux_designer">UX Designer</string>
+    <string name="address">Address</string>
+    <string name="bhavanagar_highway_rk_university">Bhavanagar Highway, Rk University,</string>
+    <string name="tramba_rajkot_360_020">Tramba, Rajkot, 360-020,</string>
+    <string name="gujarat_india">Gujarat, India</string>
+    <string name="contact">Contact</string>
+    <string name="kishan_patel">kishan Patel</string>
+    <string name="email">ksakkhiya622@rku.ac.in</string>
+    <string name="contact_number">63535 88336</string>
+    <string name="person_icon">Person Icon</string>
+    <string name="emil_icon">Emil Icon</string>
+    <string name="pone_icon">Pone Icon</string>
+    <string name="linkedin_icon">Linkedin Icon</string>
+    <string name="convert">Convert</string>
+    <string name="autofillhhint">Number</string>
+    <string name="volume">Volume</string>
+    <string name="time">Time</string>
+    <string name="digital_storage">Digital Storage</string>
+    <string name="area">Area</string>
+
+    <string-array name="speed">
+        <item>df</item>
+        <item>Inch</item>
+        <item>CM</item>
+        <item>SCM</item>
+    </string-array>
+
+    <string-array name="length">
+        <item>Foot_To_Inch</item>
+        <item>Inch To Foot</item>
+        <item>Kilometer To Meter</item>
+        <item>Meter To Kilometer</item>
+        <item>Centimeter To Inch</item>
+        <item>Inch To Centimeter</item>
+        <item>Foot To Meter</item>
+        <item>Meter To Foot</item>
+    </string-array>
+
+    <string-array name="volume">
+        <item>Foot_To_Inch</item>
+    </string-array>
+
+    <string-array name="spn_area">
+        <item>Hectare To Acre</item>
+        <item>Acre To Hectare</item>
+        <item>Hectare To Square Foot</item>
+        <item>Acre To Square Foot</item>
+        <item>Square Foot To Square Inch</item>
+    </string-array>
+
+    <string-array name="time">
+        <item>Hour To Minute</item>
+        <item>Minute To Hour</item>
+        <item>Minute To Second</item>
+        <item>Hour To Second</item>
+        <item>Second To Hour</item>
+        <item>Month To Day</item>
+        <item>Year To Day</item>
+    </string-array>
+
+    <string-array name="spn_digital_storage">
+        <item>Byte To Bit</item>
+        <item>Bit To Byte</item>
+        <item>Nibble To Bit</item>
+        <item>Bit To Nibble</item>
+        <item>Kilobyte To Byte</item>
+        <item>Megabyte To Kilobyte</item>
+        <item>Gigabyte To Megabyte</item>
+        <item>Terabyte To Gigabyte</item>
+        <item>Megabyte To Gigabyte</item>
+    </string-array>
+
+</resources>
