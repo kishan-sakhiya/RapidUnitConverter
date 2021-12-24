@@ -51,7 +51,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="weather"
+                    android:text="@string/weather"
                     android:textAlignment="center"
                     android:textSize="15sp"
                     android:textStyle="normal" />
@@ -211,7 +211,7 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:contentDescription="@string/five"
-                    android:src="@drawable/ic_volume" />
+                    android:src="@drawable/ic_mass" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -257,11 +257,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Digital"
+                    android:text="@string/digital"
                     android:textAlignment="center"
                     android:textSize="15sp"
                     android:textStyle="normal" />
-
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

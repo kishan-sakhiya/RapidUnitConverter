@@ -28,27 +28,22 @@
     <string name="email">ksakkhiya622@rku.ac.in</string>
     <string name="contact_number">63535 88336</string>
     <string name="person_icon">Person Icon</string>
-    <string name="emil_icon">Emil Icon</string>
+    <string name="emil_icon">Email Icon</string>
     <string name="pone_icon">Pone Icon</string>
     <string name="linkedin_icon">Linkedin Icon</string>
     <string name="convert">Convert</string>
     <string name="autofillhhint">Number</string>
-    <string name="volume">Volume</string>
     <string name="time">Time</string>
     <string name="digital_storage">Digital Storage</string>
     <string name="area">Area</string>
     <string name="mass">Mass</string>
     <string name="weather">Weather</string>
-
-    <string-array name="speed">
-        <item>df</item>
-        <item>Inch</item>
-        <item>CM</item>
-        <item>SCM</item>
-    </string-array>
+    <string name="input_hint_txt">Input</string>
+    <string name="btn_convert_txt">Convert</string>
+    <string name="digital">Digital</string>
 
     <string-array name="length">
-        <item>Foot_To_Inch</item>
+        <item>Foot To Inch</item>
         <item>Inch To Foot</item>
         <item>Kilometer To Meter</item>
         <item>Meter To Kilometer</item>

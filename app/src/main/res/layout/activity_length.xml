@@ -46,6 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_length" />
 
     <ImageView
+        android:id="@+id/img"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_centerVertical="true"
@@ -69,10 +70,12 @@
         android:layout_marginEnd="8dp"
         android:autofillHints="@string/autofillhhint"
         android:background="@drawable/edt_bg_color"
-        android:inputType="number"
-        android:maxLength="10"
+        android:hint="@string/input_hint_txt"
+        android:inputType="numberDecimal"
+        android:maxLength="15"
         android:padding="10dp"
         android:textColor="@color/black"
+        android:textColorHint="@color/text_hint_color"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +95,7 @@
         android:enabled="false"
         android:hint="@string/result"
         android:inputType="number"
-        android:maxLength="10"
+        android:maxLength="20"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/text_hint_color"
@@ -107,8 +110,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Convert"
-        android:textSize="15sp"
+        android:text="@string/btn_convert_txt"
+        android:textAllCaps="false"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_ans_length" />

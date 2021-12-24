@@ -1,14 +1,10 @@
 package com.rku.rapidunitconverter;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,6 +14,7 @@ public class LengthActivity extends AppCompatActivity {
     Spinner spn_length;
     Button btn_length;
 
+    @SuppressLint("DefaultLocale")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,60 +25,95 @@ public class LengthActivity extends AppCompatActivity {
         spn_length = findViewById(R.id.spn_length);
         btn_length = findViewById(R.id.btn_length);
 
-        btn_length.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String spn = null;
-                double edt_value = 0;
+        btn_length.setOnClickListener(v -> {
+            String spn = null;
+            double edt_value = 0;
 
-                try {
-                    spn = spn_length.getSelectedItem().toString();
-                    edt_value = Double.parseDouble(edt_length.getText().toString());
-                } catch (Exception e) {
+            try {
+
+                spn = spn_length.getSelectedItem().toString();
+                edt_value = Double.parseDouble(edt_length.getText().toString());
+
+
+            } catch (Exception e) {
+                edt_ans_length.setText("0");
+            }
+
+            if (edt_length.getText().toString().length() == 0) {
+                edt_ans_length.setText("0");
+            }
+
+
+            if (spn != null && spn.equals("Foot To Inch")) {
+
+                if (edt_value == 0) {
                     edt_ans_length.setText("0");
-                }
-
-                if (edt_length.getText().toString().length() == 0) {
-                    edt_ans_length.setText("0");
-                }
-
-                if (spn.equals("Foot_To_Inch")) {
+                } else {
                     double ans = edt_value * 12;
                     edt_ans_length.setText(String.format("%.2f", ans));
                 }
+            }
 
-                if (spn.equals("Inch To Foot")) {
+            if ("Inch To Foot".equals(spn)) {
+                if (edt_value == 0) {
+                    edt_ans_length.setText("0");
+                } else {
                     double ans = edt_value / 12;
                     edt_ans_length.setText(String.format("%.2f", ans));
                 }
-                if (spn.equals("Kilometer To Meter")) {
+            }
+
+            if ("Kilometer To Meter".equals(spn)) {
+                if (edt_value == 0) {
+                    edt_ans_length.setText("0");
+                } else {
                     double ans = edt_value * 1000;
                     edt_ans_length.setText(String.format("%.2f", ans));
                 }
-                if (spn.equals("Meter To Kilometer")) {
+            }
+
+            if ("Meter To Kilometer".equals(spn)) {
+                if (edt_value == 0) {
+                    edt_ans_length.setText("0");
+                } else {
                     double ans = edt_value / 1000;
                     edt_ans_length.setText(String.format("%.2f", ans));
                 }
-                if (spn.equals("Centimeter To Inch")) {
+            }
+
+            if ("Centimeter To Inch".equals(spn)) {
+                if (edt_value == 0) {
+                    edt_ans_length.setText("0");
+                } else {
                     double ans = edt_value * 0.39370;
                     edt_ans_length.setText(String.format("%.2f", ans));
                 }
-                if (spn.equals("Inch To Centimeter")) {
+            }
+            if ("Inch To Centimeter".equals(spn)) {
+                if (edt_value == 0) {
+                    edt_ans_length.setText("0");
+                } else {
                     double ans = edt_value / 0.39370;
                     edt_ans_length.setText(String.format("%.2f", ans));
                 }
-                if (spn.equals("Foot To Meter")) {
-                    double ans = edt_value *  0.3048;
+            }
+            if ("Foot To Meter".equals(spn)) {
+                if (edt_value == 0) {
+                    edt_ans_length.setText("0");
+                } else {
+                    double ans = edt_value * 0.3048;
                     edt_ans_length.setText(String.format("%.2f", ans));
                 }
-                if (spn.equals("Meter To Foot")) {
+            }
+            if ("Meter To Foot".equals(spn)) {
+                if (edt_value == 0) {
+                    edt_ans_length.setText("0");
+                } else {
                     double ans = edt_value * 3.2808;
                     edt_ans_length.setText(String.format("%.2f", ans));
                 }
-
             }
         });
-
     }
 
 }
