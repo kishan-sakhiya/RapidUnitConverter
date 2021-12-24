@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    CardView cvspeed, cvlength, cvvolume, cvtime, cvdigitalstorage, cvarea;
+    CardView cvspeed, cvlength, cvmass, cvtime, cvdigitalstorage, cvarea;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         cvspeed = findViewById(R.id.cvspeed);
         cvlength = findViewById(R.id.cvlength);
-        cvvolume = findViewById(R.id.cvvolume);
+        cvmass = findViewById(R.id.cvmass);
         cvtime = findViewById(R.id.cvtime);
         cvdigitalstorage = findViewById(R.id.cvdigitalstorage);
         cvarea = findViewById(R.id.cvarea);
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         cvspeed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SpeedActivity.class);
+                Intent intent = new Intent(MainActivity.this, WeatherActivity.class);
                 startActivity(intent);
             }
         });
@@ -44,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        cvvolume.setOnClickListener(new View.OnClickListener() {
+        cvmass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, VolumeActivity.class);
+                Intent intent = new Intent(MainActivity.this, MassActivity.class);
                 startActivity(intent);
 
             }

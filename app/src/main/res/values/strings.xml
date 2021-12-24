@@ -37,6 +37,8 @@
     <string name="time">Time</string>
     <string name="digital_storage">Digital Storage</string>
     <string name="area">Area</string>
+    <string name="mass">Mass</string>
+    <string name="weather">Weather</string>
 
     <string-array name="speed">
         <item>df</item>
@@ -56,8 +58,18 @@
         <item>Meter To Foot</item>
     </string-array>
 
-    <string-array name="volume">
-        <item>Foot_To_Inch</item>
+    <string-array name="spn_weather">
+        <item>Celsius To Fahrenheit</item>
+        <item>Fahrenheit To Celsius</item>
+    </string-array>
+
+    <string-array name="spn_mass">
+        <item>Kilogram To Gram</item>
+        <item>Gram To Kilogram</item>
+        <item>Milligram To Microgram</item>
+        <item>Microgram To Milligram</item>
+        <item>Quintal To Kilogram</item>
+        <item>Tonne To Kilogram</item>
     </string-array>
 
     <string-array name="spn_area">

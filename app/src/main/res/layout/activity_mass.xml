@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_bg_color"
-    tools:context=".VolumeActivity">
+    tools:context=".MassActivity">
 
     <TextView
-        android:id="@+id/txt_length"
+        android:id="@+id/txt_mass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -17,7 +17,7 @@
         android:layout_marginEnd="8dp"
         android:gravity="center"
         android:padding="10dp"
-        android:text="@string/volume"
+        android:text="@string/mass"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
 
 
     <Spinner
-        android:id="@+id/spn_length"
+        android:id="@+id/spn_mass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -37,13 +37,13 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/custom_spinner"
-        android:entries="@array/volume"
+        android:entries="@array/spn_mass"
         android:gravity="center"
         android:padding="10dp"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_length" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_mass" />
 
     <ImageView
         android:layout_width="35dp"
@@ -57,10 +57,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_length" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_time" />
 
     <EditText
-        android:id="@+id/edt_length"
+        android:id="@+id/edt_mass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -76,11 +76,11 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spn_length"
+        app:layout_constraintTop_toBottomOf="@+id/spn_mass"
         tools:ignore="LabelFor" />
 
     <EditText
-        android:id="@+id/edt_ans_length"
+        android:id="@+id/edt_ans_mass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -99,18 +99,18 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_length" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_mass" />
 
     <Button
-        android:id="@+id/btn_length"
+        android:id="@+id/btn_mass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Convert"
+        android:text="@string/convert"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_ans_length" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_ans_mass" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

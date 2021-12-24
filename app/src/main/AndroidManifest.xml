@@ -9,14 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RapidUnitConverter">
-        <activity android:name=".AreaActivity"></activity>
+        <activity android:name=".WeatherActivity"></activity>
+        <activity android:name=".MassActivity" />
+        <activity android:name=".AreaActivity" />
         <activity
             android:name=".DigitalStorageActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".TimeActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".VolumeActivity" />
         <activity
             android:name=".LengthActivity"
             android:screenOrientation="portrait">
@@ -28,9 +29,6 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity
-            android:name=".SpeedActivity"
-            android:screenOrientation="portrait" />
         <activity
             android:name=".AboutActivity"
             android:screenOrientation="portrait" />
