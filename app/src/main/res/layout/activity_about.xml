@@ -151,7 +151,7 @@
                     android:layout_marginTop="10dp"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:text="@string/bhavanagar_highway_rk_university"
+                    android:text="@string/address_line_one"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -162,7 +162,7 @@
                     android:layout_marginTop="10dp"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:text="@string/tramba_rajkot_360_020"
+                    android:text="@string/address_line_two"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -173,7 +173,7 @@
                     android:layout_marginTop="10dp"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:text="@string/gujarat_india"
+                    android:text="@string/address_line_three"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -233,7 +233,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:contentDescription="@string/emil_icon"
+                        android:contentDescription="@string/email_icon"
                         android:paddingStart="10dp"
                         android:paddingEnd="3dp"
                         android:src="@drawable/ic_about_email" />

@@ -45,15 +45,16 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:contentDescription="@string/first"
+                    android:contentDescription="@string/first_cv"
                     android:src="@drawable/ic_speed" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/weather"
+                    android:text="@string/weather_txt"
                     android:textAlignment="center"
                     android:textSize="15sp"
+                    android:textColor="@color/black"
                     android:textStyle="normal" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -86,13 +87,14 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:contentDescription="@string/second"
+                    android:contentDescription="@string/second_cv"
                     android:src="@drawable/speed1" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/length"
+                    android:text="@string/length_txt"
+                    android:textColor="@color/black"
                     android:textAlignment="center"
                     android:textSize="15sp"
                     android:textStyle="normal" />
@@ -128,15 +130,16 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:contentDescription="@string/three"
+                    android:contentDescription="@string/three_cv"
                     android:src="@drawable/ic_mass" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/area"
+                    android:text="@string/area_txt"
                     android:textAlignment="center"
                     android:textSize="15sp"
+                    android:textColor="@color/black"
                     android:textStyle="normal" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -169,14 +172,15 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:contentDescription="@string/four"
+                    android:contentDescription="@string/four_cv"
                     android:src="@drawable/ic_time" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/time"
+                    android:text="@string/time_txt"
                     android:textAlignment="center"
+                    android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="normal" />
             </LinearLayout>
@@ -210,13 +214,14 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:contentDescription="@string/five"
+                    android:contentDescription="@string/five_cv"
                     android:src="@drawable/ic_mass" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/mass"
+                    android:text="@string/mass_txt"
+                    android:textColor="@color/black"
                     android:textAlignment="center"
                     android:textSize="15sp"
                     android:textStyle="normal" />
@@ -251,15 +256,16 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/six"
+                    android:contentDescription="@string/six_cv"
                     android:src="@drawable/ic_baseline_speed_24" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/digital"
+                    android:text="@string/ds_txt"
                     android:textAlignment="center"
                     android:textSize="15sp"
+                    android:textColor="@color/black"
                     android:textStyle="normal" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>

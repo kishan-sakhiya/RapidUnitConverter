@@ -9,17 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RapidUnitConverter">
-        <activity android:name=".WeatherActivity"></activity>
-        <activity android:name=".MassActivity" />
-        <activity android:name=".AreaActivity" />
+        <activity
+            android:name=".WeatherActivity"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".MassActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AreaActivity"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".DigitalStorageActivity"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".TimeActivity"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".LengthActivity"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
 
             <!-- <intent-filter> -->

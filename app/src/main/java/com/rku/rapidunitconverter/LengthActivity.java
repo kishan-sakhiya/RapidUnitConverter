@@ -113,6 +113,22 @@ public class LengthActivity extends AppCompatActivity {
                     edt_ans_length.setText(String.format("%.2f", ans));
                 }
             }
+            if ("Yard To Foot".equals(spn)) {
+                if (edt_value == 0) {
+                    edt_ans_length.setText("0");
+                } else {
+                    double ans = edt_value * 3;
+                    edt_ans_length.setText(String.format("%.2f", ans));
+                }
+            }
+            if ("Foot To Yard".equals(spn)) {
+                if (edt_value == 0) {
+                    edt_ans_length.setText("0");
+                } else {
+                    double ans = edt_value / 3;
+                    edt_ans_length.setText(String.format("%.2f", ans));
+                }
+            }
         });
     }
 

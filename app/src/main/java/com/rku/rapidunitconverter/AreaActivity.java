@@ -2,8 +2,8 @@ package com.rku.rapidunitconverter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -13,6 +13,7 @@ public class AreaActivity extends AppCompatActivity {
     EditText edt_area, edt_ans_area;
     Spinner spn_area;
 
+    @SuppressLint("DefaultLocale")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,45 +24,87 @@ public class AreaActivity extends AppCompatActivity {
         edt_area = findViewById(R.id.edt_area);
         spn_area = findViewById(R.id.spn_area);
 
-        btn_area.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String spn = null;
-                double edt_value = 0;
+        btn_area.setOnClickListener(v -> {
+            String spn = null;
+            double edt_value = 0;
 
-                try {
-                    spn = spn_area.getSelectedItem().toString();
-                    edt_value = Double.parseDouble(edt_area.getText().toString());
-                } catch (Exception e) {
+            try {
+                spn = spn_area.getSelectedItem().toString();
+                edt_value = Double.parseDouble(edt_area.getText().toString());
+            } catch (Exception e) {
+                edt_ans_area.setText("0");
+            }
+
+            if (edt_area.getText().toString().length() == 0) {
+                edt_ans_area.setText("0");
+            }
+
+            if ("Hectare To Acre".equals(spn)) {
+                if (edt_value == 0) {
                     edt_ans_area.setText("0");
-                }
-
-                if (edt_area.getText().toString().length() == 0) {
-                    edt_ans_area.setText("0");
-                }
-
-                if (spn.equals("Hectare To Acre")) {
+                } else {
                     double ans = edt_value * 2.4711;
                     edt_ans_area.setText(String.format("%.2f", ans));
                 }
-                if (spn.equals("Acre To Hectare")) {
+            }
+            if ("Acre To Hectare".equals(spn)) {
+                if (edt_value == 0) {
+                    edt_ans_area.setText("0");
+                } else {
                     double ans = edt_value / 2.4711;
                     edt_ans_area.setText(String.format("%.2f", ans));
                 }
-                if (spn.equals("Hectare To Square Foot")) {
+            }
+            if ("Hectare To Square Foot".equals(spn)) {
+                if (edt_value == 0) {
+                    edt_ans_area.setText("0");
+                } else {
                     double ans = edt_value * 107639.1041;
                     edt_ans_area.setText(String.format("%.2f", ans));
                 }
-                if (spn.equals("Acre To Square Foot")) {
+            }
+            if ("Acre To Square Foot".equals(spn)) {
+                if (edt_value == 0) {
+                    edt_ans_area.setText("0");
+                } else {
                     double ans = edt_value * 43560;
                     edt_ans_area.setText(String.format("%.2f", ans));
                 }
-                if (spn.equals("Square Foot To Square Inch")) {
+            }
+            if ("Square Foot To Square Inch".equals(spn)) {
+                if (edt_value == 0) {
+                    edt_ans_area.setText("0");
+                } else {
                     double ans = edt_value * 144;
                     edt_ans_area.setText(String.format("%.2f", ans));
                 }
-
             }
+            if ("Square Yard To Square Foot".equals(spn)) {
+                if (edt_value == 0) {
+                    edt_ans_area.setText("0");
+                } else {
+                    double ans = edt_value * 9;
+                    edt_ans_area.setText(String.format("%.2f", ans));
+                }
+            }
+            if ("Square Foot To Square Yard".equals(spn)) {
+                if (edt_value == 0) {
+                    edt_ans_area.setText("0");
+                } else {
+                    double ans = edt_value / 9;
+                    edt_ans_area.setText(String.format("%.2f", ans));
+                }
+            }
+
+            if ("Square Inch To Square Foot".equals(spn)) {
+                if (edt_value == 0) {
+                    edt_ans_area.setText("0");
+                } else {
+                    double ans = edt_value / 144;
+                    edt_ans_area.setText(String.format("%.3f", ans));
+                }
+            }
+
         });
 
     }
