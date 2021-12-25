@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">રેપિડ યુનિટ કન્વર્ટર</string>
+    <string name="splash_txt">રેપિડ યુનિટ કન્વર્ટર</string>
+    <string name="img_content_description">ચિહ્ન</string>
+    <string name="length_txt">લંબાઈ</string>
+    <string name="speed_icon">ઝડપ ચિહ્ન</string>
+    <string name="length_icon">લંબાઈનું ચિહ્ન</string>
+    <string name="first_cv">પ્રથમ</string>
+    <string name="second_cv">બીજું</string>
+    <string name="three_cv">ત્રણ</string>
+    <string name="four_cv">ચાર</string>
+    <string name="five_cv">પાંચ</string>
+    <string name="six_cv">છ</string>
+    <string name="result">પરિણામ</string>
+    <string name="our_team">અમારી ટીમ</string>
+    <string name="kishan">કિશન</string>
+    <string name="android_developer">એન્ડ્રોઇડ ડેવલોપર</string>
+    <string name="harsh">હર્ષ</string>
+    <string name="ux_designer">ડિઝાઇનર</string>
+    <string name="address">સરનામું</string>
+    <string name="address_line_one">ભાવનગર હાઇવે, આરકે યુનિવર્સિટી,</string>
+    <string name="address_line_two">ત્રંબા, રાજકોટ, ૩૬૦-૦૨૦</string>
+    <string name="address_line_three">ગુજરાત, ભારત</string>
+    <string name="contact">સંપર્ક કરો</string>
+    <string name="kishan_patel">કિશન પટેલ</string>
+    <string name="email">ksakkhiya622@rku.ac.in</string>
+    <string name="contact_number">૬૩૫૩૫ ૮૮૩૩૬</string>
+    <string name="person_icon">વ્યક્તિનું ચિહ્ન</string>
+    <string name="email_icon">ઈમેલ ચિહ્ન</string>
+    <string name="pone_icon">ફોન ચિહ્ન</string>
+    <string name="linkedin_icon">Linkedin ચિહ્ન</string>
+    <string name="convert">કન્વર્ટ કરો</string>
+    <string name="autofillhint">સંખ્યા</string>
+    <string name="time_txt">સમય</string>
+    <string name="digital_storage">ડિજિટલ સ્ટોરેજ</string>
+    <string name="area_txt">વિસ્તાર</string>
+    <string name="mass_txt">વજન</string>
+    <string name="weather_txt">હવામાન</string>
+    <string name="input_hint_txt">ઇનપુટ</string>
+    <string name="btn_convert_txt">કન્વર્ટ કરો</string>
+    <string name="ds_txt">ડેટા</string>
+    <string name="spinner_icon">સ્પિનર ચિહ્ન</string>
+    <string name="about">અમારા વિશે</string>
+
+    <string-array name="spn_length">
+        <item>Foot To Inch</item>
+        <item>Inch To Foot</item>
+        <item>Kilometer To Meter</item>
+        <item>Meter To Kilometer</item>
+        <item>Centimeter To Inch</item>
+        <item>Inch To Centimeter</item>
+        <item>Foot To Meter</item>
+        <item>Meter To Foot</item>
+        <item>Yard To Foot</item>
+        <item>Foot To Yard</item>
+    </string-array>
+
+    <string-array name="spn_weather">
+        <item>Celsius To Fahrenheit</item>
+        <item>Fahrenheit To Celsius</item>
+    </string-array>
+
+    <string-array name="spn_mass">
+        <item>Kilogram To Gram</item>
+        <item>Gram To Kilogram</item>
+        <item>Milligram To Microgram</item>
+        <item>Microgram To Milligram</item>
+        <item>Quintal To Kilogram</item>
+        <item>Kilogram To Quintal</item>
+        <item>Tonne To Kilogram</item>
+        <item>Kilogram To Tonne</item>
+    </string-array>
+
+    <string-array name="spn_area">
+        <item>Hectare To Acre</item>
+        <item>Acre To Hectare</item>
+        <item>Hectare To Square Foot</item>
+        <item>Acre To Square Foot</item>
+        <item>Square Foot To Square Inch</item>
+        <item>Square Inch To Square Foot</item>
+        <item>Square Yard To Square Foot</item>
+        <item>Square Foot To Square Yard</item>
+    </string-array>
+
+    <string-array name="spn_time">
+        <item>Hour To Minute</item>
+        <item>Minute To Hour</item>
+        <item>Minute To Second</item>
+        <item>Second To Minute</item>
+        <item>Hour To Second</item>
+        <item>Second To Hour</item>
+        <item>Month To Day</item>
+        <item>Day To Month</item>
+        <item>Year To Day</item>
+        <item>Day To Year</item>
+    </string-array>
+
+    <string-array name="spn_digital_storage">
+        <item>Byte To Bit</item>
+        <item>Bit To Byte</item>
+        <item>Nibble To Bit</item>
+        <item>Bit To Nibble</item>
+        <item>Kilobyte To Byte</item>
+        <item>Byte To Kilobyte</item>
+        <item>Megabyte To Kilobyte</item>
+        <item>Gigabyte To Megabyte</item>
+        <item>Terabyte To Gigabyte</item>
+        <item>Megabyte To Gigabyte</item>
+    </string-array>
+
+</resources>
