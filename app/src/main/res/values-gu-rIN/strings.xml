@@ -29,7 +29,8 @@
     <string name="person_icon">વ્યક્તિનું ચિહ્ન</string>
     <string name="email_icon">ઈમેલ ચિહ્ન</string>
     <string name="pone_icon">ફોન ચિહ્ન</string>
-    <string name="linkedin_icon">Linkedin ચિહ્ન</string>
+    <string name="linkedin_icon_kishan">Linkedin ચિહ્ન કિશન</string>
+    <string name="linkedin_icon_harsh">Linkedin ચિહ્ન હર્ષ</string>
     <string name="convert">કન્વર્ટ કરો</string>
     <string name="autofillhint">સંખ્યા</string>
     <string name="time_txt">સમય</string>

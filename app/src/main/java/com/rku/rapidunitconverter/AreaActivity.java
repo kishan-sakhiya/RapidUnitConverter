@@ -19,6 +19,8 @@ public class AreaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_area);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         btn_area = findViewById(R.id.btn_area);
         edt_ans_area = findViewById(R.id.edt_ans_area);
         edt_area = findViewById(R.id.edt_area);
@@ -104,7 +106,6 @@ public class AreaActivity extends AppCompatActivity {
                     edt_ans_area.setText(String.format("%.3f", ans));
                 }
             }
-
         });
 
     }

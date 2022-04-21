@@ -7,37 +7,49 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class AboutActivity extends AppCompatActivity {
 
-    ImageView img_linkedin_kishan,getImg_linkedin_harsh;
+//    ImageView img_linkedin_kishan,getImg_linkedin_harsh;
+    TextView txtversion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        img_linkedin_kishan = findViewById(R.id.img_linkedin_kishan);
-        getImg_linkedin_harsh = findViewById(R.id.img_linkedin_harsh);
 
-        img_linkedin_kishan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoURL("https://www.linkedin.com/in/kishansakhiya/");
-            }
-        });
 
-        getImg_linkedin_harsh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoURL("https://www.linkedin.com/in/harsh-nagar-67044b1a2/");
-            }
-        });
+
+
+
+
+//        img_linkedin_kishan = findViewById(R.id.img_linkedin_kishan);
+//        getImg_linkedin_harsh = findViewById(R.id.img_linkedin_harsh);
+        txtversion = findViewById(R.id.txtversion);
+//
+//        img_linkedin_kishan.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                gotoURL("https://www.linkedin.com/in/kishansakhiya/");
+//            }
+//        });
+//
+//        getImg_linkedin_harsh.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                gotoURL("https://www.linkedin.com/in/harsh-nagar-67044b1a2/");
+//            }
+//        });
+//
+        txtversion.setText(BuildConfig.VERSION_NAME);
+
     }
 
-    private void gotoURL(String s) {
-        Uri uri = Uri.parse(s);
-        startActivity(new Intent(Intent.ACTION_VIEW,uri));
-    }
+//    private void gotoURL(String s) {
+//        Uri uri = Uri.parse(s);
+//        startActivity(new Intent(Intent.ACTION_VIEW,uri));
+//    }
 }
 

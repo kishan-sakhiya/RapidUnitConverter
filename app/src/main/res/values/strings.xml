@@ -28,7 +28,8 @@
     <string name="person_icon">Person Icon</string>
     <string name="email_icon">Email Icon</string>
     <string name="pone_icon">Pone Icon</string>
-    <string name="linkedin_icon">Linkedin Icon</string>
+    <string name="linkedin_icon_kishan">Linkedin Icon Kishan</string>
+    <string name="linkedin_icon_harsh">Linkedin Icon Harsh</string>
     <string name="convert">Convert</string>
     <string name="autofillhint">Number</string>
     <string name="time_txt">Time</string>
@@ -41,6 +42,10 @@
     <string name="ds_txt">Data</string>
     <string name="spinner_icon">Spinner Icon</string>
     <string name="about">About</string>
+    <string name="about_msg">Our application is very light-weight. All units can be easily converted and it\'s easy to use.</string>
+    <string name="version">Version</string>
+    <string name="last_update">Last Update</string>
+    <string name="april_2022">April 2022</string>
 
     <string-array name="spn_length">
         <item>Foot To Inch</item>

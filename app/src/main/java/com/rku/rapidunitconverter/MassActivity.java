@@ -44,7 +44,7 @@ public class MassActivity extends AppCompatActivity {
                     edt_ans_mass.setText("0");
                 } else {
                     double ans = edt_value * 1000;
-                    edt_ans_mass.setText(String.format("%.3f", ans));
+                    edt_ans_mass.setText(String.format("%.2f", ans));
                 }
             }
             if ("Gram To Kilogram".equals(spn)) {
