@@ -28,8 +28,8 @@
     <string name="person_icon">Person Icon</string>
     <string name="email_icon">Email Icon</string>
     <string name="pone_icon">Pone Icon</string>
-    <string name="linkedin_icon_kishan">Linkedin Icon Kishan</string>
-    <string name="linkedin_icon_harsh">Linkedin Icon Harsh</string>
+<!--    <string name="linkedin_icon_kishan">Linkedin Icon Kishan</string>-->
+<!--    <string name="linkedin_icon_harsh">Linkedin Icon Harsh</string>-->
     <string name="convert">Convert</string>
     <string name="autofillhint">Number</string>
     <string name="time_txt">Time</string>
@@ -112,5 +112,6 @@
         <item>Terabyte To Gigabyte</item>
         <item>Megabyte To Gigabyte</item>
     </string-array>
+
 
 </resources>
