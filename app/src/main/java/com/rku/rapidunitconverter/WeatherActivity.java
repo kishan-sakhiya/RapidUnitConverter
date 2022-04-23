@@ -15,6 +15,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class WeatherActivity extends AppCompatActivity {
 
     AutoCompleteTextView actv;
@@ -28,24 +30,14 @@ public class WeatherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
 
-        String[] arr_spn_weather = getResources().getStringArray(R.array.spn_weather);
+        initialize_widgets();
 
-        actv = findViewById(R.id.spn_weather);
-        btn_weather = findViewById(R.id.btn_weather);
-        txt_weather_result = findViewById(R.id.txt_weather_result);
-        edt_weather = findViewById(R.id.edt_weather);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                this,
-                R.layout.drop_down_item,
-                arr_spn_weather
-        );
-
-        actv.setAdapter(adapter);
+        create_spinner();
 
         actv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
 
                 btn_weather.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -53,6 +45,16 @@ public class WeatherActivity extends AppCompatActivity {
 
                         String spn = actv.getText().toString();
 
+                        if (edt_weather.getText().toString().trim().isEmpty()) {
+
+                            Snackbar.make(v, getResources().getString(R.string.emty_sb_msg), Snackbar.LENGTH_LONG).setAction("Close", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                }
+                            }).show();
+
+                            return;
+                        }
 
                         double value = 0;
 
@@ -65,7 +67,6 @@ public class WeatherActivity extends AppCompatActivity {
                             }
 
 
-
                         } catch (Exception e) {
                             txt_weather_result.setText("0");
                             return;
@@ -74,18 +75,38 @@ public class WeatherActivity extends AppCompatActivity {
 
                         if (spn.equals("Celsius To Fahrenheit")) {
                             double ans = (value * 9 / 5) + 32;
-
                             txt_weather_result.setText(String.format("%.2f", ans));
-
-//                            Toast.makeText(WeatherActivity.this, "Match "+ans, Toast.LENGTH_SHORT).show();
                         }
 
                     }
                 });
 
             }
+
         });
 
+
+    }
+
+    private void create_spinner() {
+        String[] arr_spn_weather = getResources().getStringArray(R.array.spn_weather);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                this,
+                R.layout.drop_down_item,
+                arr_spn_weather
+        );
+
+        actv.setAdapter(adapter);
+
+    }
+
+    private void initialize_widgets() {
+
+        actv = findViewById(R.id.spn_weather);
+        btn_weather = findViewById(R.id.btn_weather);
+        txt_weather_result = findViewById(R.id.txt_weather_result);
+        edt_weather = findViewById(R.id.edt_weather);
 
     }
 }

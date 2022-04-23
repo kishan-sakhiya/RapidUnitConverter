@@ -46,6 +46,11 @@
     <string name="version">Version</string>
     <string name="last_update">Last Update</string>
     <string name="april_2022">April 2022</string>
+    <string name="emty_sb_msg">Filed is Empty</string>
+    <string name="sb_btn">Close</string>
+    <string name="type">Type</string>
+    <string name="select">Select</string>
+    <string name="enter_a_number">Enter a Number</string>
 
     <string-array name="spn_length">
         <item>Foot To Inch</item>
