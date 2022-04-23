@@ -6,20 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".WeatherActivity">
 
-    <!--    android:background="@color/app_bg_color"-->
-
     <TextView
         android:id="@+id/txt_weather"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
         android:padding="10dp"
         android:text="@string/weather_txt"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         android:textColor="@color/purple_500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,104 +25,15 @@
         tools:ignore="MissingConstraints" />
 
 
-    <!--    <Spinner-->
-    <!--        android:id="@+id/spn_weather"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_centerVertical="true"-->
-    <!--        android:layout_gravity="center"-->
-    <!--        android:layout_margin="10dp"-->
-    <!--        android:layout_marginStart="8dp"-->
-    <!--        android:layout_marginTop="15dp"-->
-    <!--        android:layout_marginEnd="8dp"-->
-    <!--        android:background="@drawable/custom_spinner"-->
-    <!--        android:entries="@array/spn_weather"-->
-    <!--        android:gravity="center"-->
-    <!--        android:padding="10dp"-->
-    <!--        android:spinnerMode="dropdown"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/txt_weather" />-->
-
-    <!--    <ImageView-->
-    <!--        android:layout_width="35dp"-->
-    <!--        android:layout_height="35dp"-->
-    <!--        android:layout_centerVertical="true"-->
-    <!--        android:layout_gravity="center"-->
-    <!--        android:layout_marginTop="15dp"-->
-    <!--        android:contentDescription="@string/spinner_icon"-->
-    <!--        android:padding="1dp"-->
-    <!--        android:src="@drawable/ic_dropdown"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.95"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/txt_weather" />-->
-
-    <!--    <EditText-->
-    <!--        android:id="@+id/edt_weather"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_margin="10dp"-->
-    <!--        android:layout_marginStart="8dp"-->
-    <!--        android:layout_marginTop="10dp"-->
-    <!--        android:layout_marginEnd="8dp"-->
-    <!--        android:autofillHints="@string/autofillhint"-->
-    <!--        android:background="@drawable/edt_bg_color"-->
-    <!--        android:inputType="number"-->
-    <!--        android:maxLength="15"-->
-    <!--        android:hint="@string/input_hint_txt"-->
-    <!--        android:textColorHint="@color/text_hint_color"-->
-    <!--        android:padding="10dp"-->
-    <!--        android:textColor="@color/black"-->
-    <!--        android:textSize="16sp"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/spn_weather"-->
-    <!--        tools:ignore="LabelFor" />-->
-
-    <!--    <EditText-->
-    <!--        android:id="@+id/edt_ans_weather"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_margin="10dp"-->
-    <!--        android:layout_marginStart="8dp"-->
-    <!--        android:layout_marginTop="10dp"-->
-    <!--        android:layout_marginEnd="8dp"-->
-    <!--        android:autofillHints="@string/autofillhint"-->
-    <!--        android:background="@drawable/edt_bg_color"-->
-    <!--        android:enabled="false"-->
-    <!--        android:hint="@string/result"-->
-    <!--        android:inputType="number"-->
-    <!--        android:maxLength="10"-->
-    <!--        android:padding="10dp"-->
-    <!--        android:textColor="@color/black"-->
-    <!--        android:textColorHint="@color/text_hint_color"-->
-    <!--        android:textSize="16sp"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/edt_weather" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/btn_weather"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="16dp"-->
-    <!--        android:gravity="center"-->
-    <!--        android:text="@string/convert"-->
-    <!--        android:textSize="17sp"-->
-    <!--        android:textAllCaps="false"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/edt_ans_weather" />-->
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textField"
-        
-        android:layout_width="match_parent"
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Type"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_weather">
@@ -133,45 +42,75 @@
             android:id="@+id/spn_weather"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none" />
+            android:inputType="none"
+            android:text="Select">
+
+        </AutoCompleteTextView>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textField1"
+        android:id="@+id/txtlnumber"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:hint="Enter Number"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Enter a Number"
         app:counterEnabled="true"
-        app:counterMaxLength="10"
+        app:counterMaxLength="20"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
-        app:helperText="Digit"
+        app:helperText="1234"
         app:helperTextEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textField">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_weather"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:maxLines="1" />
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <Button
-        android:id="@+id/containedButton"
+        android:id="@+id/btn_weather"
+        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Convert"
+        android:layout_marginTop="25dp"
+        android:text="@string/convert"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        app:icon="@drawable/ic_baseline_repeat_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textField1" />
+        app:layout_constraintTop_toBottomOf="@+id/txtlnumber" />
+
+
+    <TextView
+        android:id="@+id/txt_weather_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Result"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:textColor="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_weather"
+        tools:ignore="MissingConstraints" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

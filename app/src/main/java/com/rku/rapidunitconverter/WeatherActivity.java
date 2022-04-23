@@ -4,60 +4,88 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class WeatherActivity extends AppCompatActivity {
 
+    AutoCompleteTextView actv;
     Button btn_weather;
-    EditText edt_weather, edt_ans_weather;
-    Spinner spn_weather;
+    EditText edt_weather;
+    TextView txt_weather_result;
 
     @SuppressLint({"DefaultLocale", "SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
-//
-//        btn_weather = findViewById(R.id.btn_weather);
-//        edt_ans_weather = findViewById(R.id.edt_ans_weather);
-//        edt_weather = findViewById(R.id.edt_weather);
-//        spn_weather = findViewById(R.id.spn_weather);
-//
-//        btn_weather.setOnClickListener(v -> {
-//            String spn = null;
-//            double edt_value = 0;
-//
-//            try {
-//                spn = spn_weather.getSelectedItem().toString();
-//                edt_value = Double.parseDouble(edt_weather.getText().toString());
-//            } catch (Exception e) {
-//                edt_ans_weather.setText("0");
-//            }
-//
-//            if (edt_weather.getText().toString().length() == 0) {
-//                edt_ans_weather.setText("0");
-//            }
-//
-//            if ("Celsius To Fahrenheit".equals(spn)) {
-//                if (edt_value == 0) {
-//                    edt_ans_weather.setText("32");
-//                } else {
-//                    double ans = (edt_value * 9 / 5) + 32;
-//                    edt_ans_weather.setText(String.format("%.2f", ans));
-//                }
-//            }
-//            if ("Fahrenheit To Celsius".equals(spn)) {
-//                if (edt_value == 0) {
-//                    double ans = (edt_value - 32) * 5 / 9;
-//                    edt_ans_weather.setText(String.format("%.2f", ans));
-//                } else {
-//
-//                    double ans = (edt_value - 32) * 5 / 9;
-//                    edt_ans_weather.setText(String.format("%.2f", ans));
-//                }
-//            }
-//        });
+
+        String[] arr_spn_weather = getResources().getStringArray(R.array.spn_weather);
+
+        actv = findViewById(R.id.spn_weather);
+        btn_weather = findViewById(R.id.btn_weather);
+        txt_weather_result = findViewById(R.id.txt_weather_result);
+        edt_weather = findViewById(R.id.edt_weather);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                this,
+                R.layout.drop_down_item,
+                arr_spn_weather
+        );
+
+        actv.setAdapter(adapter);
+
+        actv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                btn_weather.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        String spn = actv.getText().toString();
+
+
+                        double value = 0;
+
+                        try {
+                            value = Double.parseDouble(edt_weather.getText().toString());
+
+                            if (value == 0) {
+                                txt_weather_result.setText("0");
+                                return;
+                            }
+
+
+
+                        } catch (Exception e) {
+                            txt_weather_result.setText("0");
+                            return;
+                        }
+
+
+                        if (spn.equals("Celsius To Fahrenheit")) {
+                            double ans = (value * 9 / 5) + 32;
+
+                            txt_weather_result.setText(String.format("%.2f", ans));
+
+//                            Toast.makeText(WeatherActivity.this, "Match "+ans, Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                });
+
+            }
+        });
+
+
     }
 }
