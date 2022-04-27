@@ -38,7 +38,6 @@ public class WeatherActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-
                 btn_weather.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -66,17 +65,65 @@ public class WeatherActivity extends AppCompatActivity {
                                 return;
                             }
 
-
                         } catch (Exception e) {
                             txt_weather_result.setText("0");
                             return;
                         }
 
+                        double ans;
 
-                        if (spn.equals("Celsius To Fahrenheit")) {
-                            double ans = (value * 9 / 5) + 32;
-                            txt_weather_result.setText(String.format("%.2f", ans));
+                        switch (spn) {
+                            case "Celsius To Fahrenheit":
+                                ans = (value * 9 / 5) + 32;
+                                txt_weather_result.setText(String.format("%.2f", ans));
+                                break;
+                            case "Fahrenheit To Celsius":
+                                ans = (value - 32) * 5 / 9;
+                                txt_weather_result.setText(String.format("%.2f", ans));
+                                break;
+                            case "સેલ્સિયસ થી ફેરનહીટ":
+                                ans = (value * 9 / 5) + 32;
+                                txt_weather_result.setText(String.format("%.2f", ans));
+                                break;
+                            case "ફેરનહીટ થી સેલ્સિયસ":
+                                ans = (value - 32) * 5 / 9;
+                                txt_weather_result.setText(String.format("%.2f", ans));
+                                break;
+
+                            default:
+                                Snackbar.make(v, getResources().getString(R.string.emty_sb_msg), Snackbar.LENGTH_LONG).setAction("Close", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                    }
+                                }).show();
+
+                                break;
                         }
+
+
+//
+//                        if (spn.equals("Celsius To Fahrenheit")) {
+//                            double ans = (value * 9 / 5) + 32;
+//                            txt_weather_result.setText(String.format("%.2f", ans));
+//                            return;
+//                        }
+//                        if (spn.equals("Fahrenheit To Celsius")) {
+//                            double ans = (value - 32) * 5 / 9;
+//                            txt_weather_result.setText(String.format("%.2f", ans));
+//                            return;
+//                        }
+//
+//                        if (spn.equals("સેલ્સિયસ થી ફેરનહીટ")) {
+//                            double ans = (value * 9 / 5) + 32;
+//                            txt_weather_result.setText(String.format("%.2f", ans));
+//                            return;
+//                        }
+//
+//                        if (spn.equals("ફેરનહીટ થી સેલ્સિયસ")) {
+//                            double ans = (value - 32) * 5 / 9;
+//                            txt_weather_result.setText(String.format("%.2f", ans));
+//                            return;
+//                        }
 
                     }
                 });

@@ -29,9 +29,7 @@
     <string name="person_icon">વ્યક્તિનું ચિહ્ન</string>
     <string name="email_icon">ઈમેલ ચિહ્ન</string>
     <string name="pone_icon">ફોન ચિહ્ન</string>
-    <string name="linkedin_icon_kishan">Linkedin ચિહ્ન કિશન</string>
-    <string name="linkedin_icon_harsh">Linkedin ચિહ્ન હર્ષ</string>
-    <string name="convert">કન્વર્ટ કરો</string>
+   <string name="convert">કન્વર્ટ કરો</string>
     <string name="autofillhint">સંખ્યા</string>
     <string name="time_txt">સમય</string>
     <string name="digital_storage">ડિજિટલ સ્ટોરેજ</string>
@@ -43,6 +41,17 @@
     <string name="ds_txt">ડેટા</string>
     <string name="spinner_icon">સ્પિનર ચિહ્ન</string>
     <string name="about">અમારા વિશે</string>
+
+    <string name="about_msg">અમારી એપ્લિકેશન ખૂબ જ હળવા વજનની છે. બધા એકમો સરળતાથી કન્વર્ટ કરી શકાય છે અને તેનો ઉપયોગ કરવો સરળ છે.</string>
+    <string name="version">આવૃત્તિઓ</string>
+    <string name="last_update">છેલ્લો સુધારો</string>
+    <string name="april_2022">એપ્રિલ 2022</string>
+    <string name="emty_sb_msg">ક્ષેત્ર ખાલી છે</string>
+    <string name="sb_btn">બંધ</string>
+    <string name="type">પ્રકાર</string>
+    <string name="select">પસંદ કરો</string>
+    <string name="enter_a_number">એક નંબર દાખલ કરો</string>
+
 
     <string-array name="spn_length">
         <item>Foot To Inch</item>
@@ -58,8 +67,8 @@
     </string-array>
 
     <string-array name="spn_weather">
-        <item>Celsius To Fahrenheit</item>
-        <item>Fahrenheit To Celsius</item>
+        <item>સેલ્સિયસ થી ફેરનહીટ</item>
+        <item>ફેરનહીટ થી સેલ્સિયસ</item>
     </string-array>
 
     <string-array name="spn_mass">
