@@ -2,7 +2,6 @@
 <resources>
     <string name="app_name">રેપિડ યુનિટ કન્વર્ટર</string>
     <string name="splash_txt">રેપિડ યુનિટ કન્વર્ટર</string>
-    <string name="img_content_description">ચિહ્ન</string>
     <string name="length_txt">લંબાઈ</string>
     <string name="speed_icon">ઝડપ ચિહ્ન</string>
     <string name="length_icon">લંબાઈનું ચિહ્ન</string>
@@ -13,22 +12,6 @@
     <string name="five_cv">પાંચ</string>
     <string name="six_cv">છ</string>
     <string name="result">પરિણામ</string>
-    <string name="our_team">અમારી ટીમ</string>
-    <string name="kishan">કિશન</string>
-    <string name="android_developer">એન્ડ્રોઇડ ડેવલોપર</string>
-    <string name="harsh">હર્ષ</string>
-    <string name="ux_designer">ડિઝાઇનર</string>
-    <string name="address">સરનામું</string>
-    <string name="address_line_one">ભાવનગર હાઇવે, આરકે યુનિવર્સિટી,</string>
-    <string name="address_line_two">ત્રંબા, રાજકોટ, ૩૬૦-૦૨૦</string>
-    <string name="address_line_three">ગુજરાત, ભારત</string>
-    <string name="contact">સંપર્ક કરો</string>
-    <string name="kishan_patel">કિશન પટેલ</string>
-    <string name="email">ksakkhiya622@rku.ac.in</string>
-    <string name="contact_number">૬૩૫૩૫ ૮૮૩૩૬</string>
-    <string name="person_icon">વ્યક્તિનું ચિહ્ન</string>
-    <string name="email_icon">ઈમેલ ચિહ્ન</string>
-    <string name="pone_icon">ફોન ચિહ્ન</string>
    <string name="convert">કન્વર્ટ કરો</string>
     <string name="autofillhint">સંખ્યા</string>
     <string name="time_txt">સમય</string>
@@ -54,16 +37,16 @@
 
 
     <string-array name="spn_length">
-        <item>Foot To Inch</item>
-        <item>Inch To Foot</item>
-        <item>Kilometer To Meter</item>
-        <item>Meter To Kilometer</item>
-        <item>Centimeter To Inch</item>
-        <item>Inch To Centimeter</item>
-        <item>Foot To Meter</item>
-        <item>Meter To Foot</item>
-        <item>Yard To Foot</item>
-        <item>Foot To Yard</item>
+        <item>ફૂટ થી ઇંચ</item>
+        <item>ઇંચ ટુ ફૂટ</item>
+        <item>કિલોમીટર થી મીટર</item>
+        <item>મીટર થી કિલોમીટર</item>
+        <item>સેન્ટીમીટર થી ઇંચ</item>
+        <item>ઇંચ થી સેન્ટીમીટર</item>
+        <item>ફૂટ ટુ મીટર</item>
+        <item>મીટર ટુ ફૂટ</item>
+        <item>યાર્ડ ટુ ફુટ</item>
+        <item>ફૂટ ટુ યાર્ડ</item>
     </string-array>
 
     <string-array name="spn_weather">
@@ -72,50 +55,50 @@
     </string-array>
 
     <string-array name="spn_mass">
-        <item>Kilogram To Gram</item>
-        <item>Gram To Kilogram</item>
-        <item>Milligram To Microgram</item>
-        <item>Microgram To Milligram</item>
-        <item>Quintal To Kilogram</item>
-        <item>Kilogram To Quintal</item>
-        <item>Tonne To Kilogram</item>
-        <item>Kilogram To Tonne</item>
+        <item>કિલોગ્રામ થી ગ્રામ</item>
+        <item>ગ્રામ થી કિલોગ્રામ</item>
+        <item>મિલિગ્રામ થી માઇક્રોગ્રામ</item>
+        <item>માઇક્રોગ્રામ થી મિલિગ્રામ</item>
+        <item>ક્વિન્ટલ થી કિલોગ્રામ</item>
+        <item>કિલોગ્રામ થી ક્વિન્ટલ</item>
+        <item>ટન થી કિલોગ્રામ</item>
+        <item>કિલોગ્રામ થી ટન</item>
     </string-array>
 
     <string-array name="spn_area">
-        <item>Hectare To Acre</item>
-        <item>Acre To Hectare</item>
-        <item>Hectare To Square Foot</item>
-        <item>Acre To Square Foot</item>
-        <item>Square Foot To Square Inch</item>
-        <item>Square Inch To Square Foot</item>
-        <item>Square Yard To Square Foot</item>
-        <item>Square Foot To Square Yard</item>
+        <item>હેક્ટર થી એકર</item>
+        <item>એકર થી હેક્ટર</item>
+        <item>હેક્ટર થી ચોરસ ફૂટ</item>
+        <item>એકર થી ચોરસ ફૂટ</item>
+        <item>સ્ક્વેર ફૂટ થી સ્ક્વેર ઇંચ</item>
+        <item>ચોરસ ઇંચ થી ચોરસ ફૂટ</item>
+        <item>સ્ક્વેર યાર્ડ થી સ્ક્વેર ફૂટ</item>
+        <item>સ્ક્વેર ફૂટ થી સ્ક્વેર યાર્ડ</item>
     </string-array>
 
     <string-array name="spn_time">
-        <item>Hour To Minute</item>
-        <item>Minute To Hour</item>
-        <item>Minute To Second</item>
-        <item>Second To Minute</item>
-        <item>Hour To Second</item>
-        <item>Second To Hour</item>
-        <item>Month To Day</item>
-        <item>Day To Month</item>
-        <item>Year To Day</item>
-        <item>Day To Year</item>
+        <item>કલાક થી મિનિટ</item>
+        <item>મિનિટ થી કલાક</item>
+        <item>મિનિટ થી સેકન્ડ</item>
+        <item>સેકન્ડ ટુ મિનિટ</item>
+        <item>કલાક થી સેકન્ડ</item>
+        <item>સેકન્ડ ટુ કલાક</item>
+        <item>મહિનો ટુ ડે</item>
+        <item>દિવસ થી મહિનો</item>
+        <item>વર્ષ થી દિવસ</item>
+        <item>દિવસ થી વર્ષ</item>
     </string-array>
 
     <string-array name="spn_digital_storage">
-        <item>Byte To Bit</item>
-        <item>Bit To Byte</item>
-        <item>Nibble To Bit</item>
-        <item>Bit To Nibble</item>
-        <item>Kilobyte To Byte</item>
-        <item>Byte To Kilobyte</item>
-        <item>Megabyte To Kilobyte</item>
-        <item>Gigabyte To Megabyte</item>
-        <item>Terabyte To Gigabyte</item>
+        <item>બાઈટ ટુ બીટ</item>
+        <item>બીટ ટુ બાઈટ</item>
+        <item>નિબલ ટુ બીટ</item>
+        <item>બીટ ટુ નિબલ</item>
+        <item>કિલોબાઈટ થી બાઈટ</item>
+        <item>બાઈટ થી કિલોબાઈટ</item>
+        <item>મેગાબાઈટ થી કિલોબાઈટ</item>
+        <item>ગીગાબાઈટ થી મેગાબાઈટ</item>
+        <item>ટેરાબાઈટ થી ગીગાબાઈટ</item>
         <item>Megabyte To Gigabyte</item>
     </string-array>
 

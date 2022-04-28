@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Rapid Unit Converter</string>
     <string name="splash_txt">Rapid Unit Converter</string>
-    <string name="img_content_description">Icon</string>
     <string name="length_txt">Length</string>
     <string name="speed_icon">speed icon</string>
     <string name="length_icon">length icon</string>
@@ -12,22 +11,6 @@
     <string name="five_cv">five</string>
     <string name="six_cv">six</string>
     <string name="result">Result</string>
-    <string name="our_team">Our Team</string>
-    <string name="kishan">Kishan</string>
-    <string name="android_developer">Android Developer</string>
-    <string name="harsh">Harsh</string>
-    <string name="ux_designer">UX Designer</string>
-    <string name="address">Address</string>
-    <string name="address_line_one">Bhavanagar Highway, Rk University,</string>
-    <string name="address_line_two">Tramba, Rajkot, 360–020,</string>
-    <string name="address_line_three">Gujarat, India</string>
-    <string name="contact">Contact</string>
-    <string name="kishan_patel">kishan Patel</string>
-    <string name="email">ksakkhiya622@rku.ac.in</string>
-    <string name="contact_number">63535 88336</string>
-    <string name="person_icon">Person Icon</string>
-    <string name="email_icon">Email Icon</string>
-    <string name="pone_icon">Pone Icon</string>
     <string name="convert">Convert</string>
     <string name="autofillhint">Number</string>
     <string name="time_txt">Time</string>

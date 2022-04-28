@@ -4,15 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+
+import com.google.android.material.snackbar.Snackbar;
 
 public class TimeActivity extends AppCompatActivity {
 
-    Spinner spn_time;
-    EditText edt_time, edt_ans_time;
+    EditText edt_time;
     Button btn_time;
+    TextView txt_time_result;
+    AutoCompleteTextView actv;
 
     @SuppressLint({"DefaultLocale", "SetTextI18n"})
     @Override
@@ -21,121 +29,191 @@ public class TimeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time);
 
-        spn_time = findViewById(R.id.spn_time);
-        edt_time = findViewById(R.id.edt_time);
-        edt_ans_time = findViewById(R.id.edt_ans_time);
-        btn_time = findViewById(R.id.btn_time);
+        initialize_widgets();
 
-        btn_time.setOnClickListener(v -> {
-            String spn = null;
-            double edt_value = 0;
+        create_spinner();
+
+        actv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                btn_time.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        String spn = actv.getText().toString();
+
+                        double value = 0;
+
+                        double ans;
+
+                        if (edt_time.getText().toString().trim().isEmpty()) {
+
+                            Snackbar.make(v, getResources().getString(R.string.emty_sb_msg), Snackbar.LENGTH_LONG).setAction("Close", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                }
+                            }).show();
+
+                            return;
+                        }
 
 
-            try {
-                spn = spn_time.getSelectedItem().toString();
-                edt_value = Double.parseDouble(edt_time.getText().toString());
-            } catch (Exception e) {
-                edt_ans_time.setText("0");
-            }
-            if (edt_time.getText().toString().length() == 0) {
-                edt_ans_time.setText("0");
-            }
+                        try {
+                            value = Double.parseDouble(edt_time.getText().toString());
+
+                            if (value == 0) {
+                                txt_time_result.setText("0");
+                                return;
+                            }
+
+                        } catch (Exception e) {
+                            txt_time_result.setText("0");
+                            return;
+                        }
+
+                        switch (spn) {
+                            case "Hour To Minute":
+                                ans = value * 60;
+                                txt_time_result.setText(String.format("%.2f", ans));
+                                break;
+                            case "કલાક થી મિનિટ":
+                                ans = value * 60;
+                                txt_time_result.setText(String.format("%.2f", ans));
+                                break;
+
+                            case "Minute To Hour":
+                                ans = value / 60;
+                                txt_time_result.setText(String.format("%.2f", ans));
+                                break;
+
+                            case "મિનિટ થી કલાક":
+                                ans = value / 60;
+                                txt_time_result.setText(String.format("%.2f", ans));
+                                break;
+
+                            case "Minute To Second":
+                                ans = value / 60;
+                                txt_time_result.setText(String.format("%.2f", ans));
+                                break;
+                            case "મિનિટ થી સેકન્ડ":
+                                ans = value / 60;
+                                txt_time_result.setText(String.format("%.2f", ans));
+                                break;
+
+                            case "Second To Minute":
+                                ans = value / 60;
+                                txt_time_result.setText(String.format("%.2f", ans));
+                                break;
+
+                            case "સેકન્ડ ટુ મિનિટ":
+                                ans = value / 60;
+                                txt_time_result.setText(String.format("%.2f", ans));
+                                break;
+
+                            case "Hour To Second":
+                                ans = value * 3600;
+                                txt_time_result.setText(String.format("%.2f", ans));
+                                break;
+
+                            case "કલાક થી સેકન્ડ":
+                                ans = value * 3600;
+                                txt_time_result.setText(String.format("%.2f", ans));
+                                break;
+
+                            case "Second To Hour":
+                                double temp = value * 1;
+                                ans = temp * 1 / 3600;
+                                txt_time_result.setText(String.format("%.4f", ans));
+                                break;
+
+                            case "સેકન્ડ ટુ કલાક":
+                                double temp1 = value * 1;
+                                ans = temp1 * 1 / 3600;
+                                txt_time_result.setText(String.format("%.4f", ans));
+                                break;
+
+                            case "Month To Day":
+                                ans = value * 30.436875;
+                                txt_time_result.setText(String.format("%.2f", ans));
+                                break;
+
+                            case "મહિનો ટુ ડે":
+                                ans = value * 30.436875;
+                                txt_time_result.setText(String.format("%.2f", ans));
+                                break;
+
+                            case "Year To Day":
+                                ans = value * 365;
+                                txt_time_result.setText(String.format("%.2f", ans));
+                                break;
+
+                            case "વર્ષ થી દિવસ":
+                                ans = value * 365;
+                                txt_time_result.setText(String.format("%.2f", ans));
+                                break;
+
+                            case "Day To Year":
+                                ans = value / 365;
+                                txt_time_result.setText(String.format("%.2f", ans));
+                                break;
+                            case "દિવસ થી વર્ષ":
+                                ans = value / 365;
+                                txt_time_result.setText(String.format("%.2f", ans));
+                                break;
+
+                            case "દિવસ થી મહિનો":
+                                if ("દિવસ થી મહિનો".equals(spn)) {
+                                    if (value == 0) {
+                                        txt_time_result.setText("0");
+                                    } else if (value == 365) {
+                                        txt_time_result.setText("12");
+                                    } else if (value == 730) {
+                                        txt_time_result.setText("24");
+                                    } else if (value == 1095) {
+                                        txt_time_result.setText("36");
+                                    } else {
+                                        double dayans = value / 30;
+                                        txt_time_result.setText(String.format("%.2f", dayans));
+                                    }
+                                }
+                                break;
+
+                            default:
+                                Snackbar.make(v, getResources().getString(R.string.emty_sb_msg), Snackbar.LENGTH_LONG).setAction("Close", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                    }
+                                }).show();
+
+                                break;
+                        }
 
 
-            if ("Hour To Minute".equals(spn)) {
-                if (edt_value == 0) {
-                    edt_ans_time.setText("0");
-                } else {
-                    double ans = edt_value * 60;
-                    edt_ans_time.setText(String.format("%.2f", ans));
-                }
+                    }
+                });
             }
-
-            if ("Minute To Hour".equals(spn)) {
-                if (edt_value == 0) {
-                    edt_ans_time.setText("0");
-                } else {
-                    double ans = edt_value / 60;
-                    edt_ans_time.setText(String.format("%.2f", ans));
-                }
-            }
-
-            if ("Minute To Second".equals(spn)) {
-                if (edt_value == 0) {
-                    edt_ans_time.setText("0");
-                } else {
-                    double ans = edt_value * 60;
-                    edt_ans_time.setText(String.format("%.2f", ans));
-                }
-            }
-
-            if ("Hour To Second".equals(spn)) {
-                if (edt_value == 0) {
-                    edt_ans_time.setText("0");
-                } else {
-                    double ans = edt_value * 3600;
-                    edt_ans_time.setText(String.format("%.2f", ans));
-                }
-            }
-
-            if ("Second To Hour".equals(spn)) {
-                if (edt_value == 0) {
-                    edt_ans_time.setText("0");
-                } else {
-                    double temp = edt_value * 1;
-                    double ans = temp * 1 / 3600;
-                    edt_ans_time.setText(String.format("%.4f", ans));
-                }
-            }
-
-            if ("Month To Day".equals(spn)) {
-                if (edt_value == 0) {
-                    edt_ans_time.setText("0");
-                } else {
-                    double ans = edt_value * 30.436875;
-                    edt_ans_time.setText(String.format("%.4f", ans));
-                }
-            }
-            if ("Year To Day".equals(spn)) {
-                if (edt_value == 0) {
-                    edt_ans_time.setText("0");
-                } else {
-                    double ans = edt_value * 365;
-                    edt_ans_time.setText(String.format("%.2f", ans));
-                }
-            }
-            if ("Second To Minute".equals(spn)) {
-                if (edt_value == 0) {
-                    edt_ans_time.setText("0");
-                } else {
-                    double ans = edt_value / 60;
-                    edt_ans_time.setText(String.format("%.2f", ans));
-                }
-            }
-            if ("Day To Year".equals(spn)) {
-                if (edt_value == 0) {
-                    edt_ans_time.setText("0");
-                } else {
-                    double ans = edt_value / 365;
-                    edt_ans_time.setText(String.format("%.2f", ans));
-                }
-            }
-            if ("Day To Month".equals(spn)) {
-                if (edt_value == 0) {
-                    edt_ans_time.setText("0");
-                } else if (edt_value == 365) {
-                    edt_ans_time.setText("12");
-                } else if (edt_value == 730) {
-                    edt_ans_time.setText("24");
-                } else if (edt_value == 1095) {
-                    edt_ans_time.setText("36");
-                } else {
-                    double ans = edt_value / 30;
-                    edt_ans_time.setText(String.format("%.2f", ans));
-                }
-            }
-
         });
 
+    }
+
+
+    private void create_spinner() {
+        String[] arr_spn_weather = getResources().getStringArray(R.array.spn_time);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                this,
+                R.layout.drop_down_item,
+                arr_spn_weather
+        );
+
+        actv.setAdapter(adapter);
+
+    }
+
+    private void initialize_widgets() {
+        actv = findViewById(R.id.spn_time);
+        edt_time = findViewById(R.id.edt_time);
+        txt_time_result = findViewById(R.id.txt_time_result);
+        btn_time = findViewById(R.id.btn_time);
     }
 }

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_bg_color"
     tools:context=".TimeActivity">
 
     <TextView
@@ -13,108 +12,105 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
         android:padding="10dp"
         android:text="@string/time_txt"
-        android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/purple_500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
 
-    <Spinner
-        android:id="@+id/spn_time"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="340dp"
+        app:startIconDrawable="@drawable/ic_baseline_repeat_24"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_time">
+
+        <AutoCompleteTextView
+            android:id="@+id/spn_time"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:inputType="none"
+            android:text="@string/select"
+            android:hint="@string/type"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtlnumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/custom_spinner"
-        android:entries="@array/spn_time"
+        android:hint="@string/enter_a_number"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:startIconDrawable="@drawable/ic_icon_pencil"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:helperText="1234"
+        app:helperTextEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLines="1"
+            android:maxLength="21"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/txt_time_result"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/result_border"
         android:gravity="center"
         android:padding="10dp"
-        android:spinnerMode="dropdown"
+        android:text="@string/result"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:textColor="@color/purple_500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_time" />
-
-    <ImageView
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_centerVertical="true"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:contentDescription="@string/spinner_icon"
-        android:padding="1dp"
-        android:src="@drawable/ic_dropdown"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_time" />
-
-    <EditText
-        android:id="@+id/edt_time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
-        android:autofillHints="@string/autofillhint"
-        android:background="@drawable/edt_bg_color"
-        android:inputType="numberDecimal"
-        android:maxLength="15"
-        android:hint="@string/input_hint_txt"
-        android:textColorHint="@color/text_hint_color"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spn_time"
-        tools:ignore="LabelFor" />
-
-    <EditText
-        android:id="@+id/edt_ans_time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
-        android:autofillHints="@string/autofillhint"
-        android:background="@drawable/edt_bg_color"
-        android:enabled="false"
-        android:hint="@string/result"
-        android:inputType="numberDecimal"
-        android:maxLength="20"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/text_hint_color"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_time" />
+        app:layout_constraintTop_toBottomOf="@+id/txtlnumber"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn_time"
+        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
+        android:layout_marginTop="25dp"
         android:text="@string/convert"
-        android:textAllCaps="false"
-        android:textSize="15sp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        app:icon="@drawable/ic_baseline_repeat_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_ans_time" />
-
+        app:layout_constraintTop_toBottomOf="@+id/txt_time_result" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
