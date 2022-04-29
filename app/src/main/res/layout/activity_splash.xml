@@ -16,6 +16,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/img_content_description" />
+        android:contentDescription="@string/ok" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
