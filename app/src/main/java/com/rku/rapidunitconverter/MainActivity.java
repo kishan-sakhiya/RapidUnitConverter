@@ -3,6 +3,7 @@ package com.rku.rapidunitconverter;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,10 +12,22 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.play.core.review.ReviewInfo;
+import com.google.android.play.core.review.ReviewManager;
+import com.google.android.play.core.review.ReviewManagerFactory;
+
+import static com.google.android.material.snackbar.BaseTransientBottomBar.LENGTH_LONG;
+
 public class MainActivity extends AppCompatActivity {
 
     CardView cvspeed, cvlength, cvmass, cvtime, cvdigitalstorage, cvarea;
-
+    ReviewManager manager;
+    ReviewInfo reviewInfo;
+    ConstraintLayout layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +42,36 @@ public class MainActivity extends AppCompatActivity {
         cvtime = findViewById(R.id.cvtime);
         cvdigitalstorage = findViewById(R.id.cvdigitalstorage);
         cvarea = findViewById(R.id.cvarea);
+        layout = findViewById(R.id.layout);
 
+        // this is in app review in playstore
+        manager = ReviewManagerFactory.create(MainActivity.this);
+        Task<ReviewInfo> request = manager.requestReviewFlow();
+        request.addOnCompleteListener(new OnCompleteListener<ReviewInfo>() {
+            @Override
+            public void onComplete(@NonNull Task<ReviewInfo> task) {
+                if(task.isSuccessful()){
+                    reviewInfo = task.getResult();
+
+                    Task<Void> flow = manager.launchReviewFlow(MainActivity.this,reviewInfo);
+
+                    flow.addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+
+                        }
+                    });
+                }else {
+
+                    Snackbar snackbar = Snackbar.make(layout,"Review Not Send", LENGTH_LONG);
+                    snackbar.show();
+                }
+            }
+        });
+
+
+
+        // all card view click listener
         cvspeed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //option menu for about
     @Override
     public boolean onCreatePanelMenu(int featureId, @NonNull Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);

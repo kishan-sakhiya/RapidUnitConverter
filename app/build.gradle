@@ -13,6 +13,11 @@ android {
         versionCode 2
         versionName "1.1.1"
 
+        /*
+        * 1.0 default application
+        * 1.1.0 material design added
+        * 1.1.1 in app review added
+        */
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
