@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     CardView cvspeed, cvlength, cvmass, cvtime, cvdigitalstorage, cvarea;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
